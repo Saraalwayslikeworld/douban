@@ -4,14 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body,main {
+html,body {
     height: 100%;
-}
-
-body,main {
-    position: relative;
     font-size: 12px;
     line-height: 1.2;
+}
+body {
+    position: relative;
 }
 /*导航栏*/
 footer {
@@ -43,15 +42,15 @@ footer>div .iconfont {
 /* 主界面*/
 main {
     height: calc(100% - 50px);
+    width: 100%;
 }
 main>section {
+    height: 100%;
+    width: 100%;
     overflow: scroll;
     display: none;
     padding: 10px;
     -webkit-overflow-scrolling: touch;
-}
-main:first-child {
-    display: block!important; 
 }
 main  .movie {
     position: relative;
@@ -71,7 +70,6 @@ main  .movie a {
 main .movie img {
     float: left;
     width: 70px;
-    /* height: 100%; */
 }
 main  .movie .msg {
     padding: 5px 0;
@@ -88,12 +86,17 @@ main  .movie .msg>h2 {
 main  .movie .msg .score {
     color: #cf5656;
 }
-/* search-bar */
-main #search {
-    height: calc(100% - 50px);
+/*top250*/
+main #top250 {
+    display: block;
 }
+/* search-bar */
+/* main #search {
+    height: calc(100% - 50px);
+} */
 main #search .searchbar {
     position: relative;
+    top: 0;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
@@ -122,7 +125,11 @@ main #search .searchbar input {
     100% {transform: rotate(360deg);}
 }
 main .loading {
+    display: none;
     margin-top: 10px;
     text-align: center;
     animation: 1s rotate infinite linear;
+}
+main .loading .finish {
+   display: none;
 }
